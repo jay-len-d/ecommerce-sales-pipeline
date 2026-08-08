@@ -1,0 +1,31 @@
+# Central config for the pipeline. In Databricks, secrets (DB password,
+# AWS keys) are pulled from a secret scope, NOT stored here.
+
+aws:
+  region: us-east-1
+  s3_bucket: ecommerce-data-lake
+  raw_prefix: raw
+  watermark_prefix: _control/watermarks
+
+mysql:
+  database: ecommerce
+  jdbc_secret_scope: ecommerce          # dbutils.secrets.get(scope, key)
+  jdbc_url_key: mysql_jdbc_url
+  user_key: mysql_user
+  password_key: mysql_password
+
+databricks:
+  bronze_database: ecommerce_bronze
+  silver_database: ecommerce_silver
+  gold_database: ecommerce_gold
+  job_schedule_cron: "0 0 6 * * ?"      # daily at 6am UTC
+
+scd2:
+  business_key: customer_id
+  tracked_columns:
+    - loyalty_tier
+    - address
+    - city
+    - state
+    - postal_code
+    - email
