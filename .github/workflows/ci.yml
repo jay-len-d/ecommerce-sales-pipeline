@@ -31,7 +31,7 @@ jobs:
           pip install flake8
           flake8 transformations/ ingestion/ tests/ --max-line-length=120 --extend-ignore=E203,E127,F821
       - name: Run unit tests
-        run: pytest tests/ -v --tb=short
+        run: python -m pytest tests/ -v --tb=short
 
   # Deploys notebooks/scripts to a Databricks workspace via the Databricks CLI
   # when merging to main. Requires DATABRICKS_HOST / DATABRICKS_TOKEN secrets.
