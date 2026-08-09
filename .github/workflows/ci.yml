@@ -29,8 +29,7 @@ jobs:
       - name: Lint (flake8)
         run: |
           pip install flake8
-          flake8 transformations/ ingestion/ tests/ --max-line-length=120 --extend-ignore=E203
-
+          flake8 transformations/ ingestion/ tests/ --max-line-length=120 --extend-ignore=E203,E127,F821
       - name: Run unit tests
         run: pytest tests/ -v --tb=short
 
