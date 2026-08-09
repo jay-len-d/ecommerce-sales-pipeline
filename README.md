@@ -1,4 +1,7 @@
+![CI](https://github.com/jay-len-d/ecommerce-sales-pipeline/actions/workflows/ci.yml/badge.svg)
+
 # E-Commerce Sales Analytics Pipeline
+
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
 ![Amazon AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
