@@ -15,6 +15,12 @@ zone) → Databricks (bronze/silver/gold, Delta Lake) with a Slowly Changing
 Dimension Type 2 for customer history, unit-tested transformation logic, and
 Git-based CI/CD.
 
+## Sample Output
+
+Revenue by customer loyalty tier at time of purchase, powered by the SCD Type 2 dimension:
+
+![Revenue by tier](docs/images/revenue-by-tier.png)
+
 ## Architecture
 
 ```
